@@ -8,6 +8,19 @@
 	<name>ForgeLord Root</name>
 	<description>ForgeLord :: Parent</description>
 
+
+  	<scm>
+        <connection>scm:git:git@github.com:sebbrousse/forgelord.git</connection>
+        <developerConnection>scm:git:git@github.com:sebbrousse/forgelord.git</developerConnection>
+        <url>scm:git:git@github.com:sebbrousse/forgelord.git</url>
+    </scm>
+    <developers>
+        <developer>
+            <id>sebbrousse</id>
+            <name>Sebastien Brousse</name>
+        </developer>
+    </developers>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<slf4j-version>1.6.1</slf4j-version>
@@ -267,6 +280,40 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+			 <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <sourceEncoding>utf-8</sourceEncoding>
+                    <targetJdk>1.6</targetJdk>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <configLocation>${checkstyle.rules}</configLocation>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <formats>
+                        <format>html</format>
+                        <format>xml</format>
+                    </formats>
+                    <aggregate>true</aggregate>
+                </configuration>
+            </plugin>
 		</plugins>
 
 	</build>
