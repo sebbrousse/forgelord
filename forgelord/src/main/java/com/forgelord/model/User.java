@@ -16,6 +16,10 @@ public class User implements Serializable {
 	private String login;
 	private String fullName;
 	private String password;
+
+	public String getFullName() {
+		return fullName;
+	}
 	
 	
 }
