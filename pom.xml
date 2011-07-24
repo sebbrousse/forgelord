@@ -1,19 +1,20 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.forgelord</groupId>
-  <artifactId>forgelord-root</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>ForgeLord Root</name>
-  <description>ForgeLord :: Parent</description>
-  
-  <properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.forgelord</groupId>
+	<artifactId>forgelord-root</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>ForgeLord Root</name>
+	<description>ForgeLord :: Parent</description>
+
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<slf4j-version>1.6.1</slf4j-version>
 		<log4j-version>1.2.16</log4j-version>
 		<spring-version>3.0.5.RELEASE</spring-version>
 		<junit-version>4.8.2</junit-version>
-		<mockito-version>1.8.0</mockito-version>
+		<mockito-version>1.8.5</mockito-version>
 		<dbunit-version>2.4.6</dbunit-version>
 		<wicket-version>1.4.17</wicket-version>
 		<dbunit-version>2.4.8</dbunit-version>
@@ -41,6 +42,11 @@
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-milestone</id>
+			<name>Spring Maven MILESTONE Repository</name>
+			<url>http://maven.springframework.org/milestone</url>
 		</repository>
 	</repositories>
 
@@ -194,15 +200,9 @@
 			</dependency>
 
 			<dependency>
-				<groupId>org.synyx.hades</groupId>
-				<artifactId>org.synyx.hades</artifactId>
-				<version>${hades-version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.springframework</groupId>
-						<artifactId>org.springframework.orm</artifactId>
-					</exclusion>
-				</exclusions>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-jpa</artifactId>
+				<version>1.0.0.RC1</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
