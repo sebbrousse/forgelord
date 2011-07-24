@@ -1,20 +1,21 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.forgelord</groupId>
-  <artifactId>forgelord</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <name>ForgeLord</name>
-  <description>ForgeLord :: Web application </description>
-  
-  
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.forgelord</groupId>
+	<artifactId>forgelord</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>ForgeLord</name>
+	<description>ForgeLord :: Web application </description>
+
+
 	<parent>
 		<groupId>com.forgelord</groupId>
 		<artifactId>forgelord-root</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-  
-  <properties>
+
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -41,6 +42,11 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
 		</dependency>
 
 		<dependency>
@@ -94,7 +100,7 @@
 			<groupId>org.hsqldb</groupId>
 			<artifactId>hsqldb</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
@@ -104,7 +110,7 @@
 			<artifactId>dbunit</artifactId>
 		</dependency>
 
-		
+
 
 	</dependencies>
 
@@ -164,10 +170,10 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+
 
 		</plugins>
 
 	</build>
-  
+
 </project>
