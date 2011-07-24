@@ -4,6 +4,8 @@
   <artifactId>forgelord-root</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  <name>ForgeLord Root</name>
+  <description>ForgeLord :: Parent</description>
   
   <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
